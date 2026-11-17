@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cf4ghvv1cma2v"]
+
+[ext_resource type="Script" uid="uid://cfl08q810a7nv" path="res://area_2d.gd" id="1_erwuh"]
+[ext_resource type="Texture2D" uid="uid://blhsff62hf6pu" path="res://pixil-frame-0 (1).png" id="2_7fgd5"]
+
+[node name="Node2D" type="Node2D" unique_id=1494163557]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1038603969]
+script = ExtResource("1_erwuh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=556599481]
+modulate = Color(1, 1, 1, 0.45490196)
+position = Vector2(1, 1)
+scale = Vector2(0.10321429, 0.08435268)
+texture = ExtResource("2_7fgd5")

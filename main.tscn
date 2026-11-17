@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://chh4frnf2skxw" path="res://images.jpeg" id="4_272bh"]
 [ext_resource type="Script" uid="uid://cnvbf81dyt381" path="res://target.gd" id="5_5vw27"]
 [ext_resource type="Texture2D" uid="uid://cdcj85jpx8bqq" path="res://IMG_3713.jpg" id="6_kek77"]
+[ext_resource type="Script" uid="uid://b0kf8r80jh3t8" path="res://color_rect.gd" id="8_5vw27"]
+[ext_resource type="Script" uid="uid://bifahacovwxo" path="res://color_rect_2.gd" id="9_kek77"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jxeih"]
 
@@ -42,3 +44,19 @@ script = ExtResource("5_5vw27")
 [node name="Sprite2D" type="Sprite2D" parent="target" unique_id=1859174553]
 z_index = 7
 texture = ExtResource("6_kek77")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1082809773]
+z_index = -1
+offset_left = -608.0
+offset_top = -332.0
+offset_right = 618.0
+offset_bottom = 324.0
+script = ExtResource("8_5vw27")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1207796938]
+z_index = -5
+offset_left = -601.0
+offset_top = -330.0
+offset_right = 618.0
+offset_bottom = 325.0
+script = ExtResource("9_kek77")
