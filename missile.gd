@@ -8,12 +8,12 @@ var trun = 0
 const trailScene1 = preload("uid://b50xxm4xpukdk")
 const trailScene2 = preload("uid://cf4ghvv1cma2v")
 func _physics_process(delta: float) -> void:
-	velocity.y += 20
+	velocity.y += 10
 	thrust = 0
 	angular_velocity = angular_velocity * damp
 	if Input.is_action_pressed("ui_up"):
-		velocity.y += -50 * cos(rotation)
-		velocity.x += 50 * sin(rotation)
+		velocity.y += -25 * cos(rotation) #calculates thrust
+		velocity.x += 25 * sin(rotation)
 		fuel += -1
 		thrust = 1
 	if Input.is_action_pressed("ui_left"):
@@ -32,7 +32,7 @@ func _physics_process(delta: float) -> void:
 		trail.position = Vector2(position.x, position.y)
 		add_sibling(trail)
 		trun = 0
-	print(trun)
+	print(velocity, trun)
 	trun += 1
 	move_and_slide()
 	if velocity.x > 0:
@@ -43,11 +43,11 @@ func _physics_process(delta: float) -> void:
 		velocity.y += -4
 	if velocity.y < 0:
 		velocity.y += 4
-	if velocity.x > 10000:
-		velocity.x = 10000
-	if velocity.x < -10000:
-		velocity.x = -10000
-	if velocity.y < -10000:
-		velocity.y = -10000
-	if velocity.y > 10000:
-		velocity.y = 10000
+	if velocity.x > 4000:
+		velocity.x = 4000
+	if velocity.x < -4000:
+		velocity.x = -4000
+	if velocity.y < -4000:
+		velocity.y = -4000
+	if velocity.y > 4000:
+		velocity.y = 1000

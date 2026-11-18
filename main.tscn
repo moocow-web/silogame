@@ -4,38 +4,36 @@
 [ext_resource type="Script" uid="uid://boa5scnw8xkf7" path="res://camera_2d.gd" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://106a4ph568sd" path="res://missile.gd" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://ca2i45fkr4745" path="res://silo.gd" id="3_7mycd"]
+[ext_resource type="Texture2D" uid="uid://d03gkifnacijy" path="res://pixil-frame-0 (3).png" id="4_4c57u"]
 [ext_resource type="Texture2D" uid="uid://chh4frnf2skxw" path="res://images.jpeg" id="4_272bh"]
 [ext_resource type="Script" uid="uid://cnvbf81dyt381" path="res://target.gd" id="5_5vw27"]
 [ext_resource type="Texture2D" uid="uid://cdcj85jpx8bqq" path="res://IMG_3713.jpg" id="6_kek77"]
 [ext_resource type="Script" uid="uid://b0kf8r80jh3t8" path="res://color_rect.gd" id="8_5vw27"]
 [ext_resource type="Script" uid="uid://bifahacovwxo" path="res://color_rect_2.gd" id="9_kek77"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jxeih"]
+[ext_resource type="Script" uid="uid://3vrwfcdy54xu" path="res://gui.gd" id="11_efxa6"]
 
 [node name="Node2D" type="Node2D" unique_id=53622807]
 script = ExtResource("1_272bh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1132158053]
+scale = Vector2(0.9784212, 1.003733)
 script = ExtResource("1_h2yge")
 
 [node name="missile" type="CharacterBody2D" parent="." unique_id=1458331785]
+position = Vector2(0, -1)
 script = ExtResource("2_1bvp3")
 
 [node name="Sprite2D" type="Sprite2D" parent="missile" unique_id=1428702141]
-position = Vector2(0, -0.2499969)
-scale = Vector2(0.1328125, 0.13574219)
-texture = SubResource("NoiseTexture2D_jxeih")
-
-[node name="Sprite2D2" type="Sprite2D" parent="missile" unique_id=636786025]
-position = Vector2(-1.9073486e-06, -46)
-scale = Vector2(0.031249998, 0.09716797)
-texture = SubResource("NoiseTexture2D_jxeih")
+z_index = 8
+position = Vector2(7, -1.0000001)
+scale = Vector2(0.48640627, 0.4793711)
+texture = ExtResource("4_4c57u")
 
 [node name="silo" type="Area2D" parent="." unique_id=1447983525]
 script = ExtResource("3_7mycd")
 
-[node name="Sprite2D" type="Sprite2D" parent="silo" unique_id=519306228]
-position = Vector2(-2, -2)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=519306228]
+position = Vector2(-2, -13)
 texture = ExtResource("4_272bh")
 
 [node name="target" type="Area2D" parent="." unique_id=571405213]
@@ -60,3 +58,8 @@ offset_top = -330.0
 offset_right = 618.0
 offset_bottom = 325.0
 script = ExtResource("9_kek77")
+
+[node name="gui" type="RichTextLabel" parent="." unique_id=1800561929]
+offset_right = 258.0
+offset_bottom = 156.0
+script = ExtResource("11_efxa6")
