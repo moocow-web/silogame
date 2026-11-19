@@ -1,6 +1,7 @@
-ColorRect
 RichTextLabel
+Button
 Sprite2D
+ColorRect
 Area2D
 CharacterBody2D
 Camera2D

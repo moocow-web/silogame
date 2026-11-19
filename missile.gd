@@ -3,6 +3,8 @@ var angular_velocity = 0
 var fuel = 1000
 var damp = .96 #out of 1, .96 is standard
 var tr
+var tx
+var ty
 var thrust = 0
 var trun = 0
 var launched = 0
@@ -26,15 +28,19 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right") && launched == 1:
 		angular_velocity += .005
 	rotation += angular_velocity
-	tr = randi_range(1,2)
+	tr = randi_range(1, 1)
 	if tr == 1 && thrust == 1 && trun > 5:
 		var trail = trailScene1.instantiate()
-		trail.position = Vector2(position.x, position.y)
+		ty = 60 * cos(rotation) #calculates thrust
+		tx = -60 * sin(rotation)
+		trail.position = Vector2(position.x + tx, position.y + ty)
 		add_sibling(trail)
 		trun = 0
 	if tr == 2 && thrust == 1 && trun > 5:
 		var trail = trailScene2.instantiate()
-		trail.position = Vector2(position.x, position.y)
+		ty = -250 * cos(rotation)
+		tx = 250 * sin(rotation)
+		trail.position = Vector2(position.x - tx, position.y + ty)
 		add_sibling(trail)
 		trun = 0
 	print(velocity, trun)
@@ -56,3 +62,5 @@ func _physics_process(delta: float) -> void:
 		velocity.y = -4000
 	if velocity.y > 4000:
 		velocity.y = 1000
+	if position.y > 0 && launched == 1:
+		print("bleh")

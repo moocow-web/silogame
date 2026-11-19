@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://krklr66px2ib"]
+
+[ext_resource type="Texture2D" uid="uid://cn0hbr0p4slwh" path="res://untitled@4x.png" id="1_tt30a"]
+[ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://button.gd" id="2_1ey7h"]
+
+[node name="Node2D" type="Node2D" unique_id=761572437]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1442072409]
+position = Vector2(331, 329)
+scale = Vector2(1.8424999, 1.7937498)
+texture = ExtResource("1_tt30a")
+
+[node name="Button" type="Button" parent="." unique_id=1895053167]
+modulate = Color(1, 1, 1, 0)
+offset_left = 239.0
+offset_top = 264.0
+offset_right = 460.0
+offset_bottom = 482.0
+script = ExtResource("2_1ey7h")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=187864766]
+offset_left = 558.0
+offset_top = 37.0
+offset_right = 1101.0
+offset_bottom = 614.0
+theme_override_font_sizes/normal_font_size = 26
+text = "Controls:
+↑: Thrust
+←: Rotate left
+→: Rotate right
+Space: Launch
+
+
+Push the BIG RED BUTTON!!"

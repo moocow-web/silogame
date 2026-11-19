@@ -10,4 +10,4 @@ func _process(delta: float) -> void:
 	position = cam.position
 	position.x += -850
 	position.y += -530
-	color = Color(0.28, 0.67, 0.78, alt)
+	color = Color(0.18, 0.47, 0.68, alt)
