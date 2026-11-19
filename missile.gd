@@ -5,20 +5,25 @@ var damp = .96 #out of 1, .96 is standard
 var tr
 var thrust = 0
 var trun = 0
+var launched = 0
 const trailScene1 = preload("uid://b50xxm4xpukdk")
 const trailScene2 = preload("uid://cf4ghvv1cma2v")
 func _physics_process(delta: float) -> void:
-	velocity.y += 10
+	if launched == 1:
+		velocity.y += 10
 	thrust = 0
 	angular_velocity = angular_velocity * damp
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("ui_accept") && launched == 0:
+		velocity.y += -2000
+		launched = 1
+	if Input.is_action_pressed("ui_up") && launched == 1:
 		velocity.y += -25 * cos(rotation) #calculates thrust
 		velocity.x += 25 * sin(rotation)
 		fuel += -1
 		thrust = 1
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_left") && launched == 1:
 		angular_velocity += -.005
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_right") && launched == 1:
 		angular_velocity += .005
 	rotation += angular_velocity
 	tr = randi_range(1,2)

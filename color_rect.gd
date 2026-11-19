@@ -8,6 +8,6 @@ func _process(delta: float) -> void:
 	if alt <= 0.1:
 		alt = 0.1
 	position = cam.position
-	position.x += -600
-	position.y += -330
+	position.x += -850
+	position.y += -530
 	color = Color(0.28, 0.67, 0.78, alt)

@@ -4,6 +4,6 @@ var alt
 func _process(delta: float) -> void:
 	alt = position.y / 1000
 	position = cam.position
-	position.x += -600
-	position.y += -330
+	position.x += -850
+	position.y += -530
 	color = Color(0, 0, 0, 1)

@@ -17,6 +17,7 @@ script = ExtResource("1_272bh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1132158053]
 scale = Vector2(0.9784212, 1.003733)
+zoom = Vector2(0.7, 0.7)
 script = ExtResource("1_h2yge")
 
 [node name="missile" type="CharacterBody2D" parent="." unique_id=1458331785]
@@ -32,7 +33,7 @@ texture = ExtResource("4_4c57u")
 [node name="silo" type="Area2D" parent="." unique_id=1447983525]
 script = ExtResource("3_7mycd")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=519306228]
+[node name="Sprite2D" type="Sprite2D" parent="silo" unique_id=519306228]
 position = Vector2(-2, -13)
 texture = ExtResource("4_272bh")
 
@@ -45,21 +46,29 @@ texture = ExtResource("6_kek77")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1082809773]
 z_index = -1
-offset_left = -608.0
-offset_top = -332.0
-offset_right = 618.0
-offset_bottom = 324.0
+offset_left = -1101.0
+offset_top = -817.0
+offset_right = 1090.0
+offset_bottom = 804.0
 script = ExtResource("8_5vw27")
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1207796938]
 z_index = -5
-offset_left = -601.0
-offset_top = -330.0
-offset_right = 618.0
-offset_bottom = 325.0
+offset_left = -1102.0
+offset_top = -802.0
+offset_right = 1086.0
+offset_bottom = 797.0
 script = ExtResource("9_kek77")
 
 [node name="gui" type="RichTextLabel" parent="." unique_id=1800561929]
 offset_right = 258.0
 offset_bottom = 156.0
 script = ExtResource("11_efxa6")
+
+[node name="ColorRect" type="ColorRect" parent="gui" unique_id=1267856326]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(6.5527334, 4.1112084)
+color = Color(0, 0, 0, 0.6431373)
