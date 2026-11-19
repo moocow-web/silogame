@@ -1,2 +1,5 @@
 res://main.tscn
 res://missile.gd
+res://popup.gd
+res://gui.gd
+res://rich_text_label_2.gd

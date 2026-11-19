@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://bifahacovwxo" path="res://color_rect_2.gd" id="9_kek77"]
 [ext_resource type="Script" uid="uid://3vrwfcdy54xu" path="res://gui.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://eqofya1l5n1c" path="res://gen.gd" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://nx0h2tspb77w" path="res://popup.gd" id="12_ycdy4"]
 
 [node name="Node2D" type="Node2D" unique_id=53622807]
 script = ExtResource("1_272bh")
@@ -72,6 +73,20 @@ z_index = -1
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+scale = Vector2(6.5527334, 4.1112084)
+color = Color(0, 0, 0, 0.6431373)
+
+[node name="gui2" type="RichTextLabel" parent="." unique_id=2133934277]
+offset_right = 258.0
+offset_bottom = 156.0
+theme_override_font_sizes/normal_font_size = 36
+script = ExtResource("12_ycdy4")
+
+[node name="ColorRect" type="ColorRect" parent="gui2" unique_id=1732204768]
+z_index = -1
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 33.566772
 scale = Vector2(6.5527334, 4.1112084)
 color = Color(0, 0, 0, 0.6431373)
 
