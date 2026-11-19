@@ -82,4 +82,4 @@ func _physics_process(delta: float) -> void:
 		velocity.y = 1000
 	if position.y > 0 && launched == 1:
 		#Runs when dead
-		print("bleh")
+		get_tree().change_scene_to_file("res://home.tscn")
