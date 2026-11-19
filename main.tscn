@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://b0kf8r80jh3t8" path="res://color_rect.gd" id="8_5vw27"]
 [ext_resource type="Script" uid="uid://bifahacovwxo" path="res://color_rect_2.gd" id="9_kek77"]
 [ext_resource type="Script" uid="uid://3vrwfcdy54xu" path="res://gui.gd" id="11_efxa6"]
+[ext_resource type="Script" uid="uid://eqofya1l5n1c" path="res://gen.gd" id="12_dg77c"]
 
 [node name="Node2D" type="Node2D" unique_id=53622807]
 script = ExtResource("1_272bh")
@@ -72,3 +73,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(6.5527334, 4.1112084)
 color = Color(0, 0, 0, 0.6431373)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1945499214]
+z_index = 5
+script = ExtResource("12_dg77c")
