@@ -1,6 +1,6 @@
+RichTextLabel
 Sprite2D
 Area2D
-RichTextLabel
 Button
 ColorRect
 CharacterBody2D

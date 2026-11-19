@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cn0hbr0p4slwh" path="res://untitled@4x.png" id="1_tt30a"]
 [ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://button.gd" id="2_1ey7h"]
+[ext_resource type="Script" uid="uid://bnst8u2077n4s" path="res://rich_text_label_2.gd" id="3_o1ld7"]
 
 [node name="Node2D" type="Node2D" unique_id=761572437]
 
@@ -29,6 +30,15 @@ text = "Controls:
 ←: Rotate left
 →: Rotate right
 Space: Launch
+Try to hit the ground close to the target!
 
 
 Push the BIG RED BUTTON!!"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=1651517918]
+offset_left = 44.0
+offset_top = 533.0
+offset_right = 833.0
+offset_bottom = 573.0
+theme_override_font_sizes/normal_font_size = 22
+script = ExtResource("3_o1ld7")

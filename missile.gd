@@ -11,8 +11,10 @@ var ty
 var thrust = 0
 var trun = 0
 var launched = 0
+var time = 0
 const trailScene1 = preload("uid://b50xxm4xpukdk")
 const trailScene2 = preload("uid://cf4ghvv1cma2v")
+@onready var gui: RichTextLabel = $"../gui"
 func _physics_process(delta: float) -> void:
 	# -------------------------------------------
 	# Gravity
@@ -58,8 +60,9 @@ func _physics_process(delta: float) -> void:
 	# -------------------------------------------
 	# debug
 	# -------------------------------------------
-	print(velocity, trun)
+	print(time)
 	trun += 1
+	time += 1
 	move_and_slide()
 	# -------------------------------------------
 	# Checks
@@ -82,4 +85,9 @@ func _physics_process(delta: float) -> void:
 		velocity.y = 1000
 	if position.y > 0 && launched == 1:
 		#Runs when dead
+		# -------------------------------------------
+		# Score Calculations
+		# -------------------------------------------
+		Auto.score = gui.dis + (.1 * gui.dis) - ((time / 100) + gui.dis)
 		get_tree().change_scene_to_file("res://home.tscn")
+		

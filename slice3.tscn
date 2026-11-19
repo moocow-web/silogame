@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b2pb0fw4irloi"]
+
+[ext_resource type="Texture2D" uid="uid://w7vkafq0r4rg" path="res://untitled-pixel-art@2x.png" id="1_ltavn"]
+
+[node name="Node2D" type="Node2D" unique_id=2071494175]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=271652375]
+position = Vector2(349.99994, -6862)
+scale = Vector2(5.5703125, 7.207541)
+texture = ExtResource("1_ltavn")
