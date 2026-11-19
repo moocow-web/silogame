@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bx3irw6xshatd"]
 
-[ext_resource type="Texture2D" uid="uid://b0xjandwlvi0c" path="res://360_F_250069352_PitJVkjli6V2SHg1iebombLyuKDbjV3y.jpg" id="1_i53yn"]
+[ext_resource type="Texture2D" uid="uid://qg8lhv1uhkw2" path="res://slice1.png" id="1_i53yn"]
 
 [node name="Node2D" type="Node2D" unique_id=2071494175]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=271652375]
-position = Vector2(276, -648)
-scale = Vector2(1, 7.177778)
+position = Vector2(375.25003, -6864.7607)
+scale = Vector2(5.964845, 7.204845)
 texture = ExtResource("1_i53yn")
