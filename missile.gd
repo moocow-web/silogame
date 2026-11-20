@@ -14,10 +14,15 @@ var launched = 0
 var time = 0
 var spaced = 0
 var spdLimit = 10000
+var speedy = 0
+var sped = 0
+var lFast = 0
 const trailScene1 = preload("uid://b50xxm4xpukdk")
 const trailScene2 = preload("uid://cf4ghvv1cma2v")
 @onready var gui_2: RichTextLabel = $"../gui2"
 @onready var gui: RichTextLabel = $"../gui"
+func _ready() -> void:
+	Auto.score = 0
 func _physics_process(delta: float) -> void:
 	# -------------------------------------------
 	# Gravity
@@ -80,19 +85,37 @@ func _physics_process(delta: float) -> void:
 		velocity.y += 4
 	if velocity.x > spdLimit:
 		velocity.x = spdLimit
+		speedy = 1
 	if velocity.x < -spdLimit:
 		velocity.x = -spdLimit
+		speedy = 1
 	if velocity.y < -spdLimit:
 		velocity.y = -spdLimit
+		speedy = 1
 	if velocity.y > spdLimit:
 		velocity.y = spdLimit
+		speedy = 1
 	if position.y < -20000 && spaced == 0:
 		Auto.score += 200
 		gui_2.text = "Space! \n +200 score"
 		spaced = 1
 		print("space!")
+	if speedy == 1 && sped == 0:
+		Auto.score += 200
+		gui_2.text = "Speedy! \n +200 score"
+		sped = 1
+		speedy = 0
+		print("speedy!")
+	if position.y > -400 && launched == 1 && speedy == 1 && lFast == 0:
+		Auto.score += 200
+		gui_2.text = "Low and not-so-slow! \n +400 score"
+		speedy = 1 
+		lFast = 1
+		print("speedy!")
 	if position.y > 0 && launched == 1:
 		#Runs when dead
-		Auto.score = gui.dis + (.2 * gui.dis) - (time / 20) + Auto.score
+		Auto.score = gui.dis + (.2 * gui.dis) - (time / 60) + Auto.score
+		if Auto.score < 1:
+			Auto.score = 1
 		get_tree().change_scene_to_file("res://home.tscn")
 		

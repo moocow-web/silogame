@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://d03gkifnacijy" path="res://pixil-frame-0 (3).png" id="4_4c57u"]
 [ext_resource type="Script" uid="uid://cnvbf81dyt381" path="res://target.gd" id="5_5vw27"]
 [ext_resource type="Texture2D" uid="uid://c1j0htlfqvyfd" path="res://untitled-pixel-art@4x.png" id="6_efxa6"]
-[ext_resource type="Texture2D" uid="uid://cdcj85jpx8bqq" path="res://IMG_3713.jpg" id="6_kek77"]
 [ext_resource type="Script" uid="uid://b0kf8r80jh3t8" path="res://color_rect.gd" id="8_5vw27"]
+[ext_resource type="Texture2D" uid="uid://dinmpt84tm3f6" path="res://untitled-pixel-art@4x(1).png" id="8_ycdy4"]
 [ext_resource type="Script" uid="uid://bifahacovwxo" path="res://color_rect_2.gd" id="9_kek77"]
 [ext_resource type="Script" uid="uid://3vrwfcdy54xu" path="res://gui.gd" id="11_efxa6"]
 [ext_resource type="Script" uid="uid://eqofya1l5n1c" path="res://gen.gd" id="12_dg77c"]
@@ -41,11 +41,12 @@ position = Vector2(-2, -13)
 texture = ExtResource("6_efxa6")
 
 [node name="target" type="Area2D" parent="." unique_id=571405213]
+position = Vector2(-1, -162)
 script = ExtResource("5_5vw27")
 
 [node name="Sprite2D" type="Sprite2D" parent="target" unique_id=1859174553]
 z_index = 7
-texture = ExtResource("6_kek77")
+texture = ExtResource("8_ycdy4")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1082809773]
 z_index = -1
@@ -57,10 +58,10 @@ script = ExtResource("8_5vw27")
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1207796938]
 z_index = -7
-offset_left = -1102.0
-offset_top = -802.0
-offset_right = 1086.0
-offset_bottom = 797.0
+offset_left = -1130.0
+offset_top = -851.0
+offset_right = 1058.0
+offset_bottom = 748.0
 script = ExtResource("9_kek77")
 
 [node name="gui" type="RichTextLabel" parent="." unique_id=1800561929]
